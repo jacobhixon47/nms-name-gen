@@ -21,6 +21,10 @@ const inputContainerStyle = css`
   justify-content: space-around;
   align-items: center;
   width: 100%;
+  @media (max-width: 768px) {
+    flex-direction: column;
+    justify-content: center;
+  }
 `;
 
 const inputSectionStyle = css`

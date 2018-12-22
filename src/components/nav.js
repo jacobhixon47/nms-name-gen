@@ -9,7 +9,7 @@ const navStyle = css`
   display: flex;
   justify-content: space-around;
   align-items: center;
-  background-color: #222;
+  background-color: #111;
   color: #ddd;
 `;
 
