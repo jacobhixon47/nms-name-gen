@@ -1,0 +1,68 @@
+{
+  "civs": [
+    {
+      "name": "New Aquarius",
+      "prefix": "AQUA",
+      "regions": [
+        {
+          "name": "Kuungn Conflux",
+          "number": 1
+        },
+        {
+          "name": "Notwertja",
+          "number": 2
+        }
+      ]
+    },
+    {
+      "name": "Galactic Hub",
+      "prefix": "HUB",
+      "regions": [
+        {
+          "name": "The Arm of Vezitinen",
+          "number": 1
+        },
+        {
+          "name": "Canthian",
+          "number": 2
+        },
+        {
+          "name": "Dexterf Sector",
+          "number": 3
+        },
+        {
+          "name": "Arm of Katteus",
+          "number": 4
+        },
+        {
+          "name": "Nugsdor Adjunct",
+          "number": 5
+        },
+        {
+          "name": "Uefert Nebula",
+          "number": 6
+        },
+        {
+          "name": "Widraik",
+          "number": 7
+        },
+        {
+          "name": "Airnaka Conflux",
+          "number": 8
+        },
+        {
+          "name": "Silvess Instability",
+          "number": 9
+        },
+        {
+          "name": "Savenix Instability",
+          "number": 10
+        },
+        {
+          "name": "Nonlopsi Instability",
+          "number": 11
+        }
+      ]
+    }
+  ]
+}

@@ -1,3 +1,5 @@
+const path = require('path');
+
 module.exports = {
   siteMetadata: {
     title: 'No Man\'s Sky Star System Name Generator',
@@ -9,10 +11,11 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `images`,
-        path: `${__dirname}/src/images`,
-      },
+        name: `data`,
+        path: path.join(__dirname, 'data')
+      }
     },
+    'gatsby-transformer-json',
     'gatsby-transformer-sharp',
     'gatsby-plugin-sharp',
     {
@@ -24,7 +27,7 @@ module.exports = {
         background_color: '#663399',
         theme_color: '#663399',
         display: 'minimal-ui',
-        icon: 'src/images/gatsby-icon.png', // This path is relative to the root of the site.
+        icon: 'data/images/gatsby-icon.png', // This path is relative to the root of the site.
       },
     },
     {

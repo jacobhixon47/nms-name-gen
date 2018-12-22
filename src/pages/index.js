@@ -1,8 +1,5 @@
 import React, { Component } from 'react';
-import { Link } from 'gatsby';
-
 import Layout from '../components/layout';
-import Image from '../components/image';
 import SEO from '../components/seo';
 import NameGenPanel from '../components/name-gen-panel';
 
@@ -22,12 +19,10 @@ class IndexPage extends Component {
   }
 
   render() {
-    const regionList = [];
-
     return (
       <Layout handleNavSelect={this.handleNavSelect}>
         <SEO title="Home" keywords={['gatsby', 'application', 'react']} />
-        <NameGenPanel regionList={regionList[0]}/>
+        <NameGenPanel selectedCiv={this.state.civ}/>
       </Layout>
     );
   }

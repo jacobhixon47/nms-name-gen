@@ -18,15 +18,26 @@ class Form extends Component {
   }
 
   render() {
-    // console.log(regionList);
-    // const regionList = this.props.regionList.map((region, index) =>
-    //   <option key={index}>{region.name}</option>
-    // );
+    //
+    const regions = this.props
+                        .data
+                        .allDataJson
+                        .edges[0]
+                        .node
+                        .civs
+                        .filter(civ => civ.name === this.props.selectedCiv)[0]
+                        .regions;
+    // map regions
+    const regionList = regions.map((region, index) =>
+      <option key={index}>{region.number}. {region.name}</option>
+    );
+    console.log("CIVS: " + this.props.data.allDataJson.edges[0].node.civs.filter(civ => civ.name === this.props.selectedCiv)[0].name);
     return (
       <form onSubmit={() => {this.props.handleFormSubmit(this.state.region, this.state.lastFour, this.state.name)}} css={formStyle}>
         <label>
-          Region
-          <select>{}</select>
+          <select>
+          {regionList}
+          </select>
         </label>
         <label>
           Last four characters of coordinates
