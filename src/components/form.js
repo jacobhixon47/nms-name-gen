@@ -146,12 +146,12 @@ class Form extends Component {
           <div css={inputSectionStyle}>
             <h2>Last four (coords)</h2>
             <p><i>Example: 0430:0078:0D57:</i><strong>01DA</strong></p>
-            <input type='text' max-length='4' placeholder='01DA' value={this.state.lastFour} onChange={this.handleLastFourChange}></input>
+            <input type='text' maxlength='4' placeholder='01DA' value={this.state.lastFour} onChange={this.handleLastFourChange}></input>
           </div>
           <div css={inputSectionStyle}>
             <h2>Name</h2>
             <p><i>Anything you want!</i></p>
-            <input type='text' max-length='4' placeholder="Quetzalcoatl's Sun" value={this.state.name} onChange={this.handleNameChange}></input>
+            <input type='text' placeholder="Quetzalcoatl's Sun" value={this.state.name} onChange={this.handleNameChange}></input>
           </div>
         </div>
         <button onClick={this.handleFormSubmit} css={submitButton}>Submit!</button>

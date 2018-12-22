@@ -25,6 +25,11 @@ class IndexPage extends Component {
 
   handleNavSelect(civ) {
     this.setState({civ: civ});
+    window.scrollTo({
+      top: window.innerHeight,
+      left: 0,
+      behavior: 'smooth'
+    });
   }
 
   render() {
