@@ -14,6 +14,9 @@ const nameGenPanelStyle = css`
   flex-direction: column;
   width: 100vw;
   height: calc(100vh - 60px);
+  @media (max-width: 768px) {
+    justify-content: flex-start;
+  }
 `;
 
 const showNameStyle = css`
@@ -21,6 +24,13 @@ const showNameStyle = css`
   display: flex;
   justify-content: center;
   align-items: center;
+  @media (max-width: 768px) {
+    height: auto;
+    min-height: 20%;
+    h1 {
+      font-size: 1.6em;
+    }
+  }
 `;
 
 const NameGenPanel = (props) => (

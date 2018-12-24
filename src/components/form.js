@@ -14,6 +14,9 @@ const formStyle = css`
   align-items: center;
   flex-direction: column;
   border-bottom: 1px solid #777;
+  @media (max-width: 768px) {
+    height: auto;
+  }
 `;
 
 const inputContainerStyle = css`
@@ -33,6 +36,9 @@ const inputSectionStyle = css`
   justify-content: center;
   align-items: center;
   width: 100%;
+  @media (max-width: 768px) {
+    padding: 10px 0px;
+  }
   h2, p {
     margin-bottom: 2px;
   }
@@ -44,6 +50,9 @@ const inputSectionStyle = css`
     border-radius: 10px;
     border: none;
     width: 75%;
+    @media (max-width: 768px) {
+      width: 100%;
+    }
   }
   select {
     width: 75%;
@@ -63,16 +72,29 @@ const inputSectionStyle = css`
     cursor: pointer;
     padding: 5px;
     padding-right: 50px;
+    @media (max-width: 768px) {
+      width: 100%;
+    }
   }
 `;
 
 const submitButton = css`
   border-radius: 10px;
   padding: 10px 20px;
-  background-color: #4292f4;
-  &:hover {
-    background-color: #387dd1;
-    cursor: pointer;
+  background-color: #111;
+  color: #ddd;
+  transition: all .5s;
+  @media (min-width: 1000px) {
+    &:hover {
+      border: 1px solid #111;
+      background-color: #ddd;
+      color: #111;
+      cursor: pointer;
+      transition: all .5s;
+    }
+  }
+  @media (max-width: 768px) {
+    width: 100%;
   }
 `;
 
