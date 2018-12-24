@@ -20,7 +20,7 @@ const headerStyle = css`
   background-size: cover;
   color: #ddd;
   @media (max-width: 768px) {
-    height: calc(100vh - 104px);
+    height: calc(100vh - 140px);
     h1 {
       font-size: 1.2em;
     }
