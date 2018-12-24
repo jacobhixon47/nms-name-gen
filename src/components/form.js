@@ -1,4 +1,5 @@
 /* @jsx jsx */
+
 import PropTypes from 'prop-types'
 import React, { Component } from 'react';
 import { FaArrowDown } from 'react-icons/fa';
@@ -107,7 +108,8 @@ class Form extends Component {
       lastFour: '',
       name: ''
     }
-    this.getRegionList = this.getRegionList.bind(this);
+    this.regionSelect = this.regionSelect.bind(this);
+    this.coords = this.coords.bind(this);
     this.handleRegionChange = this.handleRegionChange.bind(this);
     this.handleLastFourChange = this.handleLastFourChange.bind(this);
     this.handleNameChange = this.handleNameChange.bind(this);
@@ -140,8 +142,8 @@ class Form extends Component {
     let name = this.state.name;
     this.props.displaySystemName(prefix, region, lastFour, name);
   }
-  getRegionList() {
-    // get regions of selected civ from JSON graphql data.
+
+  regionSelect() {
     const regions = this.props.data
                               .allDataJson
                               .edges[0]
@@ -149,19 +151,12 @@ class Form extends Component {
                               .civs
                               .filter(civ => civ.name === this.props.selectedCiv)[0]
                               .regions;
-    return regions;
-  }
-
-  render() {
-
-    // // map regions to <option> elements
-    const regionList = this.getRegionList().map((region) =>
+    const regionList = regions.map((region) =>
       <option key={region.number} value={region.number}>{region.name}</option>
     );
-
-    return (
-      <div css={formStyle}>
-        <div css={inputContainerStyle}>
+    let select = '';
+    if (regions.length > 0) {
+        select = (
           <div css={inputSectionStyle}>
             <h2>Region</h2>
             <p><i>Visible in the Galactic Map</i></p>
@@ -169,11 +164,32 @@ class Form extends Component {
               {regionList}
             </select>
           </div>
-          <div css={inputSectionStyle}>
-            <h2>Last four (coords)</h2>
-            <p><i>Example: 0430:0078:0D57:</i><strong>01DA</strong></p>
-            <input type='text' maxlength='4' placeholder='01DA' value={this.state.lastFour} onChange={this.handleLastFourChange}></input>
-          </div>
+        );
+    }
+    return select;
+  }
+
+  coords() {
+    if (this.props.selectedCiv === 'AGT') {
+      return;
+    } else {
+      return (
+        <div css={inputSectionStyle}>
+          <h2>Last four (coords)</h2>
+          <p><i>Example: 0430:0078:0D57:</i><strong>01DA</strong></p>
+          <input type='text' maxlength='4' placeholder='01DA' value={this.state.lastFour} onChange={this.handleLastFourChange}></input>
+        </div>
+      );
+    }
+  }
+
+  render() {
+
+    return (
+      <div css={formStyle}>
+        <div css={inputContainerStyle}>
+          {this.regionSelect()}
+          {this.coords()}
           <div css={inputSectionStyle}>
             <h2>Name</h2>
             <p><i>Anything you want!</i></p>

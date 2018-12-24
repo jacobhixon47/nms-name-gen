@@ -19,10 +19,14 @@ class IndexPage extends Component {
     let formattedName = name.toLowerCase()
                     .split(' ')
                     .map((s) => s.charAt(0).toUpperCase() + s.substring(1)).join(' ');
-    this.setState({newCivName: `[${prefix}${region}-${formattedLastFour}] ${formattedName}`});
-    console.log(`[${prefix}${region}-${formattedLastFour}] ${formattedName}`);
+    if (this.state.civ === 'AGT') {
+      this.setState({newCivName: `${prefix} ${formattedName}`});
+    } else {
+      this.setState({newCivName: `[${prefix}${region}-${formattedLastFour}] ${formattedName}`});
+      console.log(`[${prefix}${region}-${formattedLastFour}] ${formattedName}`);
+    }
   }
-
+  
   handleNavSelect(civ) {
     this.setState({civ: civ});
     window.scrollTo({
