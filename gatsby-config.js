@@ -24,8 +24,8 @@ module.exports = {
         name: 'gatsby-starter-default',
         short_name: 'starter',
         start_url: '/',
-        background_color: '#663399',
-        theme_color: '#663399',
+        background_color: '#111111',
+        theme_color: '#cccccc',
         display: 'minimal-ui',
         icon: 'data/images/gatsby-icon.png', // This path is relative to the root of the site.
       },
@@ -35,7 +35,22 @@ module.exports = {
       options: {
         pathToConfigModule: `src/utils/typography`,
       }
-    }
+    },
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `NMS System Name Generator`,
+        short_name: `NMS Name Gen`,
+        start_url: `/`,
+        background_color: `#111111`,
+        theme_color: `#cccccc`,
+        // Enables "Add to Homescreen" prompt and disables browser UI (including back button)
+        // see https://developers.google.com/web/fundamentals/web-app-manifest/#display
+        display: `standalone`,
+        icon: `data/images/nms-naming-icon.png`, // This path is relative to the root of the site.
+      },
+    },
+    `gatsby-plugin-offline`
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.app/offline
     // 'gatsby-plugin-offline',
