@@ -1,97 +1,71 @@
-<p align="center">
-  <a href="https://www.gatsbyjs.org">
-    <img alt="Gatsby" src="https://www.gatsbyjs.org/monogram.svg" width="60" />
-  </a>
-</p>
-<h1 align="center">
-  Gatsby's default starter
-</h1>
+# _No Man's Sky System Name Generator_
 
-Kick off your project with this default boilerplate ([live demo](https://gatsby-starter-default-demo.netlify.com/)). This barebones starter ships with the main Gatsby configuration files you might need. 
+#### _NMS Name Gen, 1.1.0, January 2019_
 
-_Have another more specific idea? You may want to check out our vibrant collection of [official and community-created starters](https://www.gatsbyjs.org/docs/gatsby-starters/)._
+#### By _Jacob Hixon_
 
-## 🚀 Quick start
+## Description
 
-1.  **Create a Gatsby site.**
+A **Progressive Web App** to create properly formatted star system names for civilized space in the popular video game *No Man's Sky*.
 
-    Use the Gatsby CLI to create a new site, specifying the default starter.
+*This app is available offline and can be saved to a smart phone home screen!*
+*(See [Progressive Web App](#progressive-web-app) section below)*
 
-    ```sh
-    # create a new Gatsby site using the default starter
-    npx gatsby new my-default-starter
-    ```
+### Live
 
-1.  **Start developing.**
+_The live site can be found [here](https://nmsnaming.surge.sh)._
 
-    Navigate into your new site’s directory and start it up.
+### Progressive Web App
 
-    ```sh
-    cd my-default-starter/
-    gatsby develop
-    ```
+This website is fully-functional as a Progressive Web App, or PWA. To learn more about PWAs, checkout [this Google outline](https://developers.google.com/web/progressive-web-apps/) of what makes a PWA.
 
-1.  **Open the source code and start editing!**
+This site passes a Lighthouse PWA audit 100%:
+![PWA Audit](data/screenshots/nmsnaming-pwa-audit.png)
 
-    Your site is now running at `http://localhost:8000`!
-    
-    *Note: You'll also see a second link: `http://localhost:8000/___graphql`. This is a tool you can use to experiment with querying your data. Learn more about using this tool in the [Gatsby tutorial](https://www.gatsbyjs.org/tutorial/part-five/#introducing-graphiql).*
-    
-    Open the `my-default-starter` directory in your code editor of choice and edit `src/pages/index.js`. Save your changes and the browser will update in real time!
-    
-## 🧐 What's inside?
 
-A quick look at the top-level files and directories you'll see in a Gatsby project.
+## Project Requirements
 
-    .
-    ├── node_modules
-    ├── src
-    ├── .gitignore
-    ├── .prettierrc
-    ├── gatsby-browser.js
-    ├── gatsby-config.js
-    ├── gatsby-node.js
-    ├── gatsby-ssr.js
-    ├── LICENSE
-    ├── package-lock.json
-    ├── package.json
-    ├── README.md
-    └── yarn.lock
+- _[gatsby-cli](https://www.npmjs.com/package/gatsby-cli)_
 
-  1.  **`/node_modules`**: This directory contains all of the modules of code that your project depends on (npm packages) are automatically installed.  
-  
-  2.  **`/src`**: This directory will contain all of the code related to what you will see on the front-end of your site (what you see in the browser) such as your site header or a page template. `src` is a convention for “source code”.
-  
-  3.  **`.gitignore`**: This file tells git which files it should not track / not maintain a version history for.
-  
-  4.  **`.prettierrc`**: This is a configuration file for [Prettier](https://prettier.io/). Prettier is a tool to help keep the formatting of your code consistent.
-  
-  5.  **`gatsby-browser.js`**: This file is where Gatsby expects to find any usage of the [Gatsby browser APIs](https://www.gatsbyjs.org/docs/browser-apis/) (if any). These allow customization/extension of default Gatsby settings affecting the browser.
-  
-  6.  **`gatsby-config.js`**: This is the main configuration file for a Gatsby site. This is where you can specify information about your site (metadata) like the site title and description, which Gatsby plugins you’d like to include, etc. (Check out the [config docs](https://www.gatsbyjs.org/docs/gatsby-config/) for more detail).
-  
-  7.  **`gatsby-node.js`**: This file is where Gatsby expects to find any usage of the [Gatsby Node APIs](https://www.gatsbyjs.org/docs/node-apis/) (if any). These allow customization/extension of default Gatsby settings affecting pieces of the site build process.
-  
-  8.  **`gatsby-ssr.js`**: This file is where Gatsby expects to find any usage of the [Gatsby server-side rendering APIs](https://www.gatsbyjs.org/docs/ssr-apis/) (if any). These allow customization of default Gatsby settings affecting server-side rendering.
-  
-  9.  **`LICENSE`**: Gatsby is licensed under the MIT license.
-  
-  10.  **`package-lock.json`** (See `package.json` below, first). This is an automatically generated file based on the exact versions of your npm dependencies that were installed for your project. **(You won’t change this file directly).**
-  
-  11.  **`package.json`**: A manifest file for Node.js projects, which includes things like metadata (the project’s name, author, etc). This manifest is how npm knows which packages to install for your project.
-  
-  12.  **`README.md`**: A text file containing useful reference information about your project.
-  
-  13.  **`yarn.lock`**: [Yarn](https://yarnpkg.com/) is a package manager alternative to npm. You can use either yarn or npm, though all of the Gatsby docs reference npm.  This file serves essentially the same purpose as `package-lock.json`, just for a different package management system.
+## Installation Instructions
 
-## 🎓 Learning Gatsby
+1. _Clone into repository located at https://github.com/jacobhixon47/nms-name-gen.git ._
+2. _In the terminal, make sure you are inside of the project folder, then run the following commands:_
+  * `$ npm install` or `$ npm i`
+  * `$ gatsby develop`
 
-Looking for more guidance? Full documentation for Gatsby lives [on the website](https://www.gatsbyjs.org/). Here are some places to start:
+3. _Once the project has finished being compiled, visit [localhost:8000](localhost:8000) in your browser.
 
--   **For most developers, we recommend starting with our [in-depth tutorial for creating a site with Gatsby](https://www.gatsbyjs.org/tutorial/).** It starts with zero assumptions about your level of ability and walks through every step of the process.
 
--   **To dive straight into code samples, head [to our documentation](https://www.gatsbyjs.org/docs/).** In particular, check out the _Guides_, _API Reference_, and _Advanced Tutorials_ sections in the sidebar.
+## Technologies Used
 
-## 💫 Deploy
+#### Generated with
 
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/gatsbyjs/gatsby-starter-default)
+_[GatsbyJS](https://www.gatsbyjs.org/docs/)_
+
+#### Deployed with
+
+_[Surge](https://surge.sh)_
+
+#### Styled with
+
+_[Emotion](https://emotion.sh) — CSS-in-JS_
+
+### License
+
+This file is part of (nms-name-gen).
+
+    (nms-name-gen) is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    (nms-name-gen) is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with the (nms-name-gen). If not, see <http://www.gnu.org/licenses/>.
+
+Copyright (c) 2019 **_Jacob Hixon_**
